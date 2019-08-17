@@ -12,6 +12,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap-honoka-rails'
+gem 'jquery-rails'
 gem 'devise'
 
 group :development, :test do
