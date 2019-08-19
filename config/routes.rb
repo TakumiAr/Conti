@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'requests/new'
   root 'home#index'
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
@@ -12,4 +13,5 @@ Rails.application.routes.draw do
     get "logout", :to => "users/sessions#destroy"
   end
   resources :users, only: [:show]
+  resources :users, only: [:new]
 end
