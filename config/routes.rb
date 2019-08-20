@@ -11,7 +11,16 @@ Rails.application.routes.draw do
     get "login", :to => "users/sessions#new"
     get "logout", :to => "users/sessions#destroy"
   end
-  resources :users, only: [:show]
+
+  namespace :mypage do
+    resources :users
+  end
+
+  namespace :requests do
+    resources :users
+  end
+
+  resources :users
   resources :requests
   resources :services
   get '/about', :to => "home#about"
