@@ -1,24 +1,24 @@
-<h1>Requests#new</h1>
-<p>Find me in app/views/requests/new.html.erb</p>
+<h1>Services#new</h1>
+<p>Find me in app/views/services/new.html.erb</p>
 
-<%= form_with(model: @request, local: true ) do |form| %>
-  <% if @request.errors.any? %>
+<%= form_with(model: @service, local: true ) do |form| %>
+  <% if @service.errors.any? %>
     <div id="error_explanation">
-      <h2><%= @request.errors.count %>件のエラーがあります。</h2>
+      <h2><%= @service.errors.count %>件のエラーがあります。</h2>
       <ul>
 
-      <% @request.errors.full_messages.each do |msg| %>
+      <% @service.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="request_title">
+  <div class="service_title">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
-  <div class="request_title">
+  <div class="service_title">
     <%= form.label :content %>
     <%= form.text_field :content %>
   </div>

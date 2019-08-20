@@ -1,2 +1,5 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>プロフィールページ</h1>
+名前: <%= @user.name%><br>
+<%= link_to 'Recuest', new_request_path %><br>
+<%= link_to 'Service', new_service_path %><br>
+<%= link_to 'Top', root_path %>

@@ -4,13 +4,24 @@ class RequestsController < ApplicationController
   end
   
   def new
-    if params[:back]
-      @request = Request.new(request_params)
+      @request = Request.new
+  end
+
+  def create
+    @request = Request.new(request_params)
+    if @request.save
+      redirect_to user_path(current_user.id)
     else
-      @request = Recuest.new
+      render 'new'
     end
   end
 
   def show
+  end
+
+  private
+
+  def request_params
+    params.require(:request).permit(:title, :content)
   end
 end

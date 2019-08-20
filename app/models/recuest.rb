@@ -1,2 +1,0 @@
-class Recuest < ApplicationRecord
-end
