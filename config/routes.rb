@@ -12,14 +12,6 @@ Rails.application.routes.draw do
     get "logout", :to => "users/sessions#destroy"
   end
 
-  namespace :mypage do
-    resources :users
-  end
-
-  namespace :requests do
-    resources :users
-  end
-
   resources :users
   resources :requests
   resources :services
