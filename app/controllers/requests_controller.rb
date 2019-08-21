@@ -19,6 +19,12 @@ class RequestsController < ApplicationController
   def show
   end
 
+  def made
+  end
+
+  def gets
+  end
+  
   private
 
   def request_params

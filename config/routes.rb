@@ -12,7 +12,11 @@ Rails.application.routes.draw do
     get "logout", :to => "users/sessions#destroy"
   end
 
+  get "users/mypage", to: "users#mypage"
   resources :users
+
+  get "requests/made", to: "requests#made"
+  get "requests/gets", to: "requests#gets"
   resources :requests
   resources :services
   get '/about', :to => "home#about"

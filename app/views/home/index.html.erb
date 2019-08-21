@@ -24,9 +24,15 @@
         <li class="nav-item">
           <a class="nav-link" href="about">About </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="requests">Requests </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="users">Artists </a>
+        </li>
         <% if user_signed_in?	%>
           <li class="nav-item">
-            <%= link_to 'Profile', mypage_user_path(current_user.id), class: "nav-link" %>
+            <%= link_to 'Mypage', users_mypage_path, class: "nav-link" %>
           </li>
         <% end %>
         <li class="nav-item dropdown">
@@ -66,7 +72,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img class="second-slide" src="assets/c9401e53ddf5aeb746b945863011d5d1a_8369364_190817_0117.jpg" alt="Second slide">
+          <img class="second-slide" src="assets/c9401e53ddf5aeb746b945863011d5d1a_9435778_190820_0012.jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption d-none d-md-block">
               <h1>Another example headline.</h1>
@@ -76,7 +82,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img class="third-slide" src="assets/EK1_0606_s.jpg" alt="Third slide">
+          <img class="third-slide" src="assets/ca43c2b9eada0cec5a119e4eed6575301_5378362_190820_0296.jpg" alt="Third slide">
           <div class="container">
             <div class="carousel-caption d-none d-md-block text-right">
               <h1>One more for good measure.</h1>
